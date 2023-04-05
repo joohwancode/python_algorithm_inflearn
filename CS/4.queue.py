@@ -25,3 +25,27 @@ class SinglyLinledList(object):
         if self.head == None:
             self.tail = None
         return v
+    
+    def print(self):
+        curn =self.head
+        string=""
+        while curn:
+            string += str(curn.data)
+            if curn.next:
+                string += "->"
+            curn=curn.next
+        print(string)
+if __name__== "__main__":
+    s=SinglyLinledList()
+    s.enqueue(Node(1))
+    s.enqueue(Node(2))
+    s.enqueue(Node(3))
+    s.enqueue(Node(4))
+    s.print()
+
+    print(s.dequeue())
+    print(s.dequeue())
+    s.print()
+    print(s.dequeue())
+    s.print()
+    
